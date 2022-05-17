@@ -22,11 +22,13 @@ setopt no_nomatch
 # alias
 # path
 alias p="~/project"
+alias sl="~/self"
 alias dl="~/download"
 # command
 alias cl="clear"
 alias sz="source ~/.zshrc"
 alias rmn="rm -rf node_modules"
+alias tl="tree -L"
 # npm
 alias nig="npm install -g"
 alias nlg="npm ls -g --depth=0"
@@ -51,9 +53,11 @@ alias glog='git log --oneline --graph'
 alias gco='git checkout --orphan'
 
 # fnm: https://github.com/Schniz/fnm
-export PATH=/home/classlatedebian/.fnm:$PATH
+export PATH=/home/classlate/.fnm:$PATH
 eval "$(fnm env --use-on-cd --node-dist-mirror=https://repo.huaweicloud.com/nodejs/)"
+# fnm end
 
-# pnpm: https://pnpm.io/installation
-export PNPM_HOME="/home/classlatedebian/.local/share/pnpm"
+# pnpm
+export PNPM_HOME="/home/classlate/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+# pnpm end
