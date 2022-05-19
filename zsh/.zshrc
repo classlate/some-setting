@@ -23,7 +23,7 @@ setopt no_nomatch
 # path
 # alias p="~/project"
 # alias sl="~/self"
-alias dl="~/download"
+alias dl="~/downloads"
 # command
 alias cl="clear"
 alias sz="source ~/.zshrc"
@@ -64,9 +64,9 @@ function p() {
 # patn to self
 function sl() {
   if [ -n "$1" ]; then
-    cd $HOME/project/$1
+    cd $HOME/self/$1
   else
-    cd $HOME/project
+    cd $HOME/self
   fi
 }
 
