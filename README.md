@@ -8,7 +8,7 @@
 
 ## Zsh
 
-[Zsh](./zsh/)
+[Zsh](./zsh/.zshrc)
 
 ## Chrome
 
