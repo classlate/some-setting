@@ -19,16 +19,15 @@ source $ZSH/oh-my-zsh.sh
 # 通配符使用
 setopt no_nomatch
 
-# alias
+# ------------- alias -------------
 # path
-alias p="~/project"
-alias sl="~/self"
+# alias p="~/project"
+# alias sl="~/self"
 alias dl="~/download"
 # command
 alias cl="clear"
 alias sz="source ~/.zshrc"
 alias rmn="rm -rf node_modules"
-alias tl="tree -L"
 # npm
 alias nig="npm install -g"
 alias nlg="npm ls -g --depth=0"
@@ -52,7 +51,38 @@ alias glo='git log --oneline'
 alias glog='git log --oneline --graph'
 alias gco='git checkout --orphan'
 
-# fnm: https://github.com/Schniz/fnm
+# ------------- function -------------
+# path to project
+function p() {
+  if [ -n "$1" ]; then
+    cd $HOME/project/$1
+  else
+    cd $HOME/project
+  fi
+}
+
+# patn to self
+function sl() {
+  if [ -n "$1" ]; then
+    cd $HOME/project/$1
+  else
+    cd $HOME/project
+  fi
+}
+
+# tree
+function tl() {
+  # 如果第一个参数是数字
+  if [[ $1 =~ ^[0-9]+$ ]]; then
+    tree --dirsfirst -L $*
+  else
+    tree --dirsfirst -L 1 $*
+  fi
+}
+
+# ------------- pack -------------
+
+# fnm
 export PATH=/home/classlate/.fnm:$PATH
 eval "$(fnm env --use-on-cd --node-dist-mirror=https://repo.huaweicloud.com/nodejs/)"
 # fnm end
