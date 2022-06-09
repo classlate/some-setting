@@ -23,7 +23,7 @@ setopt no_nomatch
 # path
 # alias p="~/project"
 # alias sl="~/self"
-alias dl="~/downloads"
+alias dl="~/Downloads"
 # command
 alias cl="clear"
 alias sz="source ~/.zshrc"
